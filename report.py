@@ -30,7 +30,7 @@ def Display(i,q,path,sur):
 
 st.set_page_config(layout="wide")
 # st.title("Respondents")
-df = pd.read_csv('/Users/suwijakn/Desktop/General_Assessment/code/Leads.csv')
+df = pd.read_csv('./Leads.csv')
 df.index += 1 
 # st.write(df)
 
@@ -76,7 +76,7 @@ if selected_row != 'click here':
 
     images = []
     for image in list:
-        images.append('/Users/suwijakn/Desktop/General_Assessment/code/images/Q3/'+ image + '.jpg')
+        images.append('./images/Q3/'+ image + '.jpg')
     
     cols = cycle(st.columns(5))
     for idx, filteredImage in enumerate(images):
@@ -85,10 +85,10 @@ if selected_row != 'click here':
     st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.markdown("""<div style="text-align: center"> <h1>สิ่งที่ไม่ชอบและข้อจำกัด ทั่วๆไป</h1> </div> """, unsafe_allow_html=True)
     # ลาย (Pattern) แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('4','ลาย (Pattern) แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q4/','png')
+    Display('4','ลาย (Pattern) แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q4/','png')
 
     # สี แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('5','สี แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q5/','png')
+    Display('5','สี แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q5/','png')
         
     # วัสดุ (Material/Fabric) แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
     st.subheader("6) วัสดุ (Material/Fabric) แบบไหนบ้างที่ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)")
@@ -102,32 +102,32 @@ if selected_row != 'click here':
     st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.markdown("""<div style="text-align: center"> <h1>สิ่งที่ไม่ชอบและข้อจำกัด เสื้อ</h1> </div> """, unsafe_allow_html=True)
     # คอเสื้อ (Neckline) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('7','คอเสื้อ (Neckline) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q7/','png')
+    Display('7','คอเสื้อ (Neckline) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q7/','png')
 
     # แขนเสื้อ (Sleeve) แบบไหนบ้างที่คุณไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('8','แขนเสื้อ (Sleeve) แบบไหนบ้างที่คุณไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q8/','png')
+    Display('8','แขนเสื้อ (Sleeve) แบบไหนบ้างที่คุณไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q8/','png')
 
     # ชายเสื้อ (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('9','ชายเสื้อ (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q9/','png')
+    Display('9','ชายเสื้อ (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q9/','png')
 
     st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.markdown("""<div style="text-align: center"> <h1>สิ่งที่ไม่ชอบและข้อจำกัด เดรสและกระโปรง</h1> </div> """, unsafe_allow_html=True)
     # ชุดเดรส (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('10','ชุดเดรส (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q10/','png')
+    Display('10','ชุดเดรส (Waistlines) แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q10/','png')
 
     # กระโปรงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('11','กระโปรงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q11/','png')
+    Display('11','กระโปรงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q11/','png')
 
     # ความยาวของ ชุดเดรสและกระโปรง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('12','ความยาวของ ชุดเดรสและกระโปรง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q12/','png')
+    Display('12','ความยาวของ ชุดเดรสและกระโปรง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q12/','png')
 
     st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.markdown("""<div style="text-align: center"> <h1>สิ่งที่ไม่ชอบและข้อจำกัด กางเกง</h1> </div> """, unsafe_allow_html=True)
     # กางเกงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('13','กางเกงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q13/','png')
+    Display('13','กางเกงแบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q13/','png')
 
     # ความยาวของ กางเกง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)
-    Display('14','ความยาวของ กางเกง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','/Users/suwijakn/Desktop/General_Assessment/code/images/Q14/','png')
+    Display('14','ความยาวของ กางเกง แบบไหนบ้างที่คุณ ไม่ชอบ(เลือกได้มากกว่า 1 ข้อ)','./images/Q14/','png')
 
     st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
     st.markdown("""<div style="text-align: center"> <h1>Body Shape</h1> </div> """, unsafe_allow_html=True)
@@ -137,7 +137,7 @@ if selected_row != 'click here':
 
         try:
             image = df[df['FIRSTNAME'] == selected_row]['รูปร่างของคุณเป็นแบบไหน'].values[0]
-            st.image('/Users/suwijakn/Desktop/General_Assessment/code/images/Q15/'+ image + '.png', width=200, caption=image)
+            st.image('./images/Q15/'+ image + '.png', width=200, caption=image)
         except:
             text(df[df['FIRSTNAME'] == selected_row]['รูปร่างของคุณเป็นแบบไหน'].values[0])
             
