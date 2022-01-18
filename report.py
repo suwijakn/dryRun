@@ -29,18 +29,17 @@ def Display(i,q,path,sur):
         
 
 st.set_page_config(layout="wide")
-# st.title("Respondents")
+st.title("Respondents")
 df = pd.read_csv('./Leads.csv')
 df.index += 1 
-# st.write(df)
+st.write(df)
 
-selected_row = st.sidebar.selectbox('SELECT FIRSTNAME',['click here']+df.FIRSTNAME.to_list())
-# st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
+selected_row = st.selectbox('SELECT FIRSTNAME',['click here']+df.FIRSTNAME.to_list())
+st.markdown("""<hr style="height:10px;border:none;color:#333;background-color:#333;" /> """, unsafe_allow_html=True)
 
 if selected_row != 'click here':
     st.title("รายบุคคล")
     st.subheader("ข้อมูลทั่วไป")
-    pd.set_option('display.max_colwidth', None)
     col1, col2 = st.columns(2)
     with col1:
         st.write(df[df['FIRSTNAME'] == selected_row]['Date'].rename("วันที่ลงทะเบียน"))
