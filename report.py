@@ -19,15 +19,17 @@ def Display(i,q,path,sur):
     for image in list:
         images.append(path+ image + '.'+sur)
 
-    try:
-        cols = cycle(st.columns(5))
-        for idx, filteredImage in enumerate(images):
+    cols = cycle(st.columns(5))
+    for idx, filteredImage in enumerate(images):
+        try:
             next(cols).image(filteredImage, width=200, caption=list[idx])
-    except:
-        if "idx" in locals():
-            text(list[idx])
-        
-
+        except:
+            if "idx" in locals():
+                text(list[idx])
+            if idx + 1 < len(images):
+                print('yes')
+                pass
+            
 st.set_page_config(layout="wide")
 st.title("Respondents")
 df = pd.read_csv('./Leads.csv')
